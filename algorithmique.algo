@@ -13,6 +13,7 @@ WHILE (sent[len]<>'.') DO
     END_IF
     if (sent[len]='a') or (sent[len]='e') or (sent[len]='i') or (sent[len]='o') or (sent[len]='u') THEN
         num_v:=num_v+1
+    END_IF
 END_WHILE
 WRITE("la longueur de la phrase est: ");
 WRITE(len);
