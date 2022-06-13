@@ -1,0 +1,23 @@
+ALGORITHM read_sent
+VAR
+sent: STRING;
+len :INTEGER:=0 ;
+num_w:=0;
+num_v:INTEGER=0;
+BEGIN
+Read(sent)
+WHILE (sent[len]<>'.') DO
+    len:=len+1;
+    IF (sent[len]=' ') THEN
+        num_w:=num_w+1;
+    END_IF
+    if (sent[len]='a') or (sent[len]='e') or (sent[len]='i') or (sent[len]='o') or (sent[len]='u') THEN
+        num_v:=num_v+1
+END_WHILE
+WRITE("la longueur de la phrase est: ");
+WRITE(len);
+WRITE("le nombre des mots : ");
+WRITE(num_w);
+WRITE("le nombre des voyelles: ");
+WRITE (num_v);
+END
